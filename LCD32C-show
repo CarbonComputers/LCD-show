@@ -42,13 +42,8 @@ fi
 if test "$j" != "kali" ;then
 if test "$1" != "lite" -a "$2" != "lite" ;then
 sudo cp -rf ./etc/rc.local-gpio /etc/rc.local
-#sudo cp -rf ./usr/share/X11/xorg.conf.d/99-fbturbo.conf-HDMI  /usr/share/X11/xorg.conf.d/99-fbturbo.conf
 else
 sudo cp -rf ./etc/rc.local /etc/rc.local
-#sudo cp -rf ./usr/share/X11/xorg.conf.d/99-fbturbo.conf  /usr/share/X11/xorg.conf.d/99-fbturbo.conf
-fi
-else
-#sudo cp ./usr/share/X11/xorg.conf.d/99-fbturbo.conf-kali /usr/share/X11/xorg.conf.d/99-fbturbo.conf
 fi
 
 if test "$1" = "0" -o "$#" = "0" -o "$2" = "0";then
@@ -92,7 +87,6 @@ fi
 
 sudo cp ./waveshare32c-overlay.dtb /boot/overlays/waveshare32c.dtbo
 sudo cp ./waveshare32c-overlay.dtb /boot/overlays/
-#sudo cp -rf ./usr/share/X11/xorg.conf.d/99-fbturbo.conf  /usr/share/X11/xorg.conf.d/
 if [ -b /dev/mmcblk0p7 ]; then
 sudo cp ./cmdline.txt-noobs /boot/cmdline.txt
 else
